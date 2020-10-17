@@ -1,7 +1,8 @@
 ---
 name: Terraform deplay to Digital Ocean
  
-on: [push]
+on:
+ workflow_dispatch:
 
 jobs:
     build:
