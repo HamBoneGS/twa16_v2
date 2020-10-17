@@ -7,9 +7,7 @@ terraform {
   }
 }
 
-variable "do_token" {
-  default =
-}
+variable "do_token" {}
 variable "pvt_key" {}
 
 provider "digitalocean" {
