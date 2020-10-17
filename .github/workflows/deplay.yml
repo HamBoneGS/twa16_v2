@@ -1,0 +1,32 @@
+---
+name: Terraform deplay to Digital Ocean
+ 
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        steps:
+        - name: "Checkout"
+          uses: actions/checkout@master
+         
+        - name: "Terraform Init"
+          uses: hashicorp/terraform-github-actions@master
+          with:
+            tf_actions_version: 0.12.13
+            tf_actions_subcommand: "init"
+            
+        - name: "Terraform Plan"
+          uses: hashicorp/terraform-github-actions@master
+          with:
+           tf_actions_version: 0.12.13
+           tf_actions_subcommand: "plan"
+           args: '-var="pvt_key=${{ secrets.Oct_SSH }}"'
+           
+        - name: "Terraform Apply"
+          uses: hashicorp/terraform-github-actions@master
+          with:
+           tf_actions_version: 0.12.13
+           tf_actions_subcommand: "apply"
+           args: '-var="pvt_key=${{ secrets.Oct_SSH }}"'
