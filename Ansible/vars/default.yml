@@ -1,0 +1,7 @@
+---
+app_user: "root"
+http_host: "hamshome"
+http_conf: "hamshome.conf"
+http_port: "80"
+disable_default: true
+twa_password: "test1234"
