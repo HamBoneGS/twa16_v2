@@ -1,4 +1,4 @@
-A project for deploying a Virtual Machine via Terraform, then handing off an inventoroy to Ansible to configure an Apache web server. Hosted on Digital Ocean.
+A project for deploying a Virtual Machine via Terraform, then handing off an inventory to Ansible to configure an Apache web server. Hosted on Digital Ocean.
 
 usage:
 
